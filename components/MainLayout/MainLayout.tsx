@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../../theme/theme';
 import Header from '../../components/Header/Header';
-import { RootNode } from '../../types/types';
+import { RootNode } from '../../typisation/types/types';
 
 const inter = Inter({ subsets: ['latin'] })
 

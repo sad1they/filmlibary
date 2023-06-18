@@ -1,29 +1,16 @@
-type FetchOptions = {
-    method: string;
-    headers: {
-        'X-RapidAPI-Key': string;
-        'X-RapidAPI-Host': string;
-    }
-}
+import { ItemsTopMovie } from "../typisation/types/types";
 
-
-const getTopRatedMovies = async () => {
-    const url: string = process.env.TOP250!;
-    const options: FetchOptions  = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': process.env.XRAPIDAPIKEY!,
-            'X-RapidAPI-Host': process.env.XRAPIDAPIHOST!
-        }
-    };
+const getTopRatedMovies = async (): Promise<Array<ItemsTopMovie>> => {
+    const url: string = process.env.TOP250 + process.env.API_KEY!;
     
-    const response = await fetch(url, options);
+    const response = await fetch(url);
+    const {items, errorMessage} = await response.json();
 
     if (!response.ok) {
-        throw new Error('Failed to get data top movies')
+        throw new Error(errorMessage);
     }
 
-    return response.json()
+    return items;
     
 }
 
