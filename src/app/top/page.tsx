@@ -1,9 +1,9 @@
 import { Metadata, NextPage } from "next"
-import getTopRatedMovies from "../../../data/getTopRatedMovies"
-import { ItemsTopMovie } from "../../../typisation/types/types";
-import ItemCard from "../../../components/ItemCard/ItemCard";
-import CardContainer from "../../../components/CardContainer/CardContainer";
-import PageTitle from "../../../components/PageTitle/PageTitle";
+import getTopRatedMovies from "../../services/getTopRatedMovies"
+import CardContainer from "../../components/CardContainer/CardContainer";
+import PageTitle from "../../components/PageTitle/PageTitle";
+import CardSearch from "../../components/CardSearch/CardSearch";
+import ItemCardMap from "@/components/ItemCardMap/ItemCardMap";
 
 export const metadata: Metadata = {
     title: 'Top 250 films ever | FilmLibary',
@@ -17,9 +17,8 @@ const page: NextPage = async () => {
         <>
             <CardContainer>
                 <PageTitle title="Top 250 films ever" variant='h1' />
-                {topMovies.map((item: ItemsTopMovie) =>
-                    <ItemCard {...item} />
-                )}
+                <CardSearch topMovies={topMovies} />
+                <ItemCardMap topMovies={topMovies} />
             </CardContainer>
         </>
     )

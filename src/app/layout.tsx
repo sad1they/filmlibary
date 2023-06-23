@@ -1,6 +1,6 @@
 import './globals.css';
-import MainLayout from '../../components/MainLayout/MainLayout'
-import { RootNode } from '../../typisation/types/types';
+import MainLayout from '../components/MainLayout/MainLayout'
+import { RootNode } from '../typisation/types/types';
 
 export const metadata = {
     title: 'Create Next App',
