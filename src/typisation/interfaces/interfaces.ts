@@ -13,6 +13,10 @@ interface IState {
     }
 }
 
+interface IPropsTopMovies<T> {
+    topMovies: T
+}
+
 export type {
-    AutocompleteInput, IState
+    AutocompleteInput, IState, IPropsTopMovies
 }

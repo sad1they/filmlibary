@@ -5,11 +5,11 @@ import Stack from '@mui/material/Stack';
 import Autocomplete from '@mui/material/Autocomplete';
 import { Grid } from '@mui/material';
 import { ItemsTopMovie } from '../../typisation/types/types';
-import { AutocompleteInput } from '../../typisation/interfaces/interfaces';
+import { AutocompleteInput, IPropsTopMovies } from '../../typisation/interfaces/interfaces';
 import { setSearch } from '@/store/slices/searchSlice';
 import { useDispatch } from 'react-redux';
 
-const CardSearch = ({topMovies}: any) => {
+const CardSearch = ({topMovies}: IPropsTopMovies<ItemsTopMovie[]>) => {
     const dispatch = useDispatch();
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

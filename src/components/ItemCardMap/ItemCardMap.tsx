@@ -1,13 +1,13 @@
 'use client';
 
 import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import { ItemsTopMovie } from '@/typisation/types/types';
 import ItemCard from '../ItemCard/ItemCard';
-import { IState } from '@/typisation/interfaces/interfaces';
-import { useEffect } from 'react';
+import { IPropsTopMovies, IState } from '@/typisation/interfaces/interfaces';
 import { setBestMovies } from '@/store/slices/searchSlice';
 
-const ItemCardMap = ({topMovies}: any) => {
+const ItemCardMap = ({topMovies}: IPropsTopMovies<ItemsTopMovie[]>) => {
     const dispatch = useDispatch();
     const searchValue = useSelector((state: IState) => state.movie.query);
     const topMoviesList = useSelector((state: IState) => state.movie.bestMovies);

@@ -1,6 +1,7 @@
 'use client';
 
 import { memo } from 'react';
+import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -11,18 +12,20 @@ import { Grid } from '@mui/material';
 import { ItemsTopMovie } from '../../typisation/types/types';
 
 const ItemCard = (item: ItemsTopMovie) => {
+    const router = useRouter();
+
     return (
         <>
             <Grid item xs={12} md={4} sx={{display: 'flex'}}>
                 <Card sx={{ 
-                    maxWidth: 345, 
+                    width: 345, 
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center'
                 }}>
                     <Image
                         src={item.image}
-                        alt={item.fullTitle}
+                        alt={item.title}
                         width={0}
                         height={0}
                         sizes="100vw"
@@ -33,17 +36,16 @@ const ItemCard = (item: ItemsTopMovie) => {
                             {item.title}
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                            {item.crew}
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
                             Rank: {item.rank}
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                            Rating: {item.imDbRating}
+                            Rating: {item.rating}
                         </Typography>
                     </CardContent>
                     <CardActions sx={{mt: 'auto'}}>
-                        <Button size="small">Learn More</Button>
+                        <Button size="small" onClick={() => router.push(`/top/${item.imdbid}`)}>
+                            Learn More
+                        </Button>
                     </CardActions>
                 </Card>
             </Grid>

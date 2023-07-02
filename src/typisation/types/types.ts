@@ -3,14 +3,21 @@ import { ReactNode } from "react";
 
 interface ItemsTopMovie {
     id: string
-    rank: string
+    rank: number
     title: string
-    fullTitle: string
-    year: string
+    year: number
     image: string
-    crew: string
-    imDbRating: string
-    imDbRatingCount: string
+    rating: string
+    crew?: string
+    imDbRatingCount?: string
+    fullTitle?: string
+    thumbnail?: string
+    description?: string
+    trailer?: string
+    genre?: string[]
+    director?: string[]
+    writers?: string[]
+    imdbid?: string
 }
 
 type RootNode = {
@@ -31,6 +38,12 @@ type TPageTitle = {
     variant: TypographyTypeMap["props"]["variant"]
 }
 
+type TParams = {
+    params: { 
+        id: string
+    }
+}
+
 export type { 
-    RootNode, TopMoviesData, ItemsTopMovie, TChildren, TPageTitle
+    RootNode, TopMoviesData, ItemsTopMovie, TChildren, TPageTitle, TParams
 };
