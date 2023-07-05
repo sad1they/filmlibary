@@ -10,9 +10,6 @@ interface IState {
     movie: {
         query: string
         bestMovies: Array<ItemsTopMovie>
-    },
-    loading: {
-        isLoading: boolean
     }
 }
 
