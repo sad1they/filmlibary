@@ -3,6 +3,6 @@ import searchSlice from './slices/searchSlice';
 
 export default configureStore({
     reducer: {
-        movie: searchSlice,
+        movie: searchSlice
     },
 });
