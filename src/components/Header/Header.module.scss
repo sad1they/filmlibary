@@ -1,0 +1,66 @@
+@import '@/theme/variables.scss';
+@import '@/theme/mixins.scss';
+
+
+.nav_menu {
+    &__desktop {
+        display: none;
+    }
+
+    &__title_mobile {
+        @include title-header();
+
+        &__link {
+            text-decoration: none;
+            font-size: 24px;
+        }
+    }
+
+    &__title_desktop {
+        display: none;
+    }
+}
+
+.mobile_box {
+    display: flex;
+}
+
+.link_title_xs {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.link_title_md {
+    text-decoration: none;
+    font-size: 24px;
+}
+
+
+
+// Desktop
+@media (min-width: $md) {
+    .nav_menu {
+        &__desktop {
+            flex-grow: 1; 
+            justify-content: flex-end;
+            display: flex;
+
+            &__link {
+                text-decoration: none;
+            }
+        }
+
+        &__title_mobile {
+            display: none;
+        }
+
+        &__title_desktop {
+            @include title-header();
+        }
+    }
+
+    .mobile_box {
+        display: none;
+    }
+}
+

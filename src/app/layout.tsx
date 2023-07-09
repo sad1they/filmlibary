@@ -1,4 +1,4 @@
-import './globals.css';
+import './globals.scss';
 import MainLayout from '../components/MainLayout/MainLayout'
 import { RootNode } from '../typisation/types/types';
 
