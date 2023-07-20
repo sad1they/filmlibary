@@ -1,9 +1,8 @@
 'use client';
 
-import React, { StrictMode } from 'react'
-import { StyledEngineProvider } from '@mui/material/styles';
+import React, { StrictMode } from 'react';
 import { Inter } from 'next/font/google';
-import { ThemeProvider } from '@mui/material/styles'
+import { StyledEngineProvider, ThemeProvider } from '@mui/material/styles'
 import theme from '../../theme/theme';
 import Header from '../Header/Header';
 import { RootNode } from '../../typisation/types/types';

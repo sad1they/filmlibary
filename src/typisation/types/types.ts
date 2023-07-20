@@ -30,7 +30,8 @@ type TopMoviesData = {
 }
 
 type TChildren = {
-    children: ReactNode
+    children: ReactNode,
+    className?: string
 }
 
 type TPageTitle = {

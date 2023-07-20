@@ -57,7 +57,17 @@
     }
 
     .footer_grid {
+        display: flex;
+        align-items: center;
         justify-content: flex-end;
+    }
+
+    .footer_container {
+        padding-left: $indent_normal;
+    }
+
+    .footer_container > div > .footer_grid {
+        padding-left: 0;
     }
 }
 

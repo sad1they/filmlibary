@@ -87,16 +87,6 @@ const Header = () => {
                                     Top
                                 </Link>
                             </MenuItem>
-                            <MenuItem key="news" onClick={handleCloseNavMenu}>
-                                <Link
-                                    href="/news"
-                                    component={NextLink}
-                                    color="text.secondary"
-                                    className={styles.link_title_xs}
-                                >
-                                    News
-                                </Link>
-                            </MenuItem>
                         </Menu>
                     </Box>
 
@@ -128,16 +118,6 @@ const Header = () => {
                                 className={styles.nav_menu__desktop__link}
                             >
                                 Top
-                            </Link>
-                        </Button>
-                        <Button key="news" onClick={handleCloseNavMenu}>
-                            <Link
-                                href="/news"
-                                component={NextLink}
-                                color="text.primary"
-                                className={styles.nav_menu__desktop__link}
-                            >
-                                News
                             </Link>
                         </Button>
                     </Box>

@@ -17,7 +17,7 @@ const Footer = () => {
         >
             <Container maxWidth="lg">
                 <Toolbar disableGutters>
-                    <CardContainer>
+                    <CardContainer className={styles.footer_container}>
                         <Grid item xs={12} md={6} className={styles.footer_grid}>
                             {/* Desktop */}
                             <LocalMoviesIcon
