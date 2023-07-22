@@ -1,0 +1,17 @@
+@import '@/theme/variables.scss';
+
+.sub_title {
+    font-size: 2rem;
+    margin-bottom: $indent_xxl;
+}
+
+.main_container {
+    width: 100vw;
+}
+
+// Desktop
+@media (min-width: $md) {
+    .sub_title {
+        font-size: 3rem;
+    }
+}

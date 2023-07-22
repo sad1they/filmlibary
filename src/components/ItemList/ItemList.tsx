@@ -1,8 +1,9 @@
 'use client';
 
 import { ItemsDataPosters } from "@/typisation/types/types";
-import { Button, Card, CardActions, CardContent, Grid, Typography } from "@mui/material";
+import { Card, CardContent, Grid, Typography } from "@mui/material";
 import Image from "next/image";
+import styles from "./ItemList.module.scss";
 
 type IProps = {
     item: ItemsDataPosters;
@@ -13,26 +14,16 @@ const ItemList = ({item}: IProps) => {
   return (
     <>
         <Grid item xs={12} md={12} sx={{display: 'flex'}}>
-            <Card sx={{
-                display: 'flex',
-                width: '100vw'
-            }}>
+            <Card className={styles.card_item__list_view}>
                 <Image
                     src={item.image}
                     alt={item.title}
                     width={0}
                     height={0}
                     sizes="100vw"
-                    style={{ 
-                        height: 'auto',
-                        flexBasis: '33.3%',
-                        objectFit: 'cover',
-                        minHeight: '300px'
-                    }}
+                    className={styles.card_item__list_view__image}
                 />
-                <CardContent sx={{
-                    flexBasis: '66.6%'
-                }}>
+                <CardContent className={styles.card_item__list_view__content}>
                     <Typography gutterBottom variant="h5" component="div">
                         {item.title}
                     </Typography>

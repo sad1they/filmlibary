@@ -1,0 +1,12 @@
+@import '@/theme/variables.scss';
+
+.page_title {
+    font-size: 3rem;
+}
+
+// Desktop
+@media (min-width: $md) {
+    .page_title {
+        font-size: 6rem;
+    }
+}
