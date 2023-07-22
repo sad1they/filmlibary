@@ -1,3 +1,6 @@
+import CardContainer from '@/components/CardContainer/CardContainer'
+import HomePage from '@/components/HomePage/HomePage'
+import PageTitle from '@/components/PageTitle/PageTitle'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -6,7 +9,12 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  return (
-    <h1>Welcome to FilmLibary</h1>              
-  )
+    return (
+        <>
+            <CardContainer>
+                <PageTitle title="FilmLibary is" variant='h1' />
+                <HomePage />
+            </CardContainer>
+        </>       
+    )
 }

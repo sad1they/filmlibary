@@ -35,10 +35,10 @@ const ItemCard = (item: ItemsTopMovie) => {
                         <Typography gutterBottom variant="h5" component="div">
                             {item.title}
                         </Typography>
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography variant="body2" color="text.primary">
                             Rank: {item.rank}
                         </Typography>
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography variant="body2" color="text.primary">
                             Rating: {item.rating}
                         </Typography>
                     </CardContent>

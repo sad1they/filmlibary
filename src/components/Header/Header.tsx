@@ -44,7 +44,7 @@ const Header = () => {
                         <Link
                             href="/"
                             component={NextLink}
-                            color="text.primary"
+                            color="text.secondary"
                             className={styles.link_title_md}
                         >
                             FilmLibary
@@ -81,7 +81,7 @@ const Header = () => {
                                 <Link
                                     href="/top"
                                     component={NextLink}
-                                    color="text.secondary"
+                                    color="text.primary"
                                     className={styles.link_title_xs}
                                 >
                                     Top
@@ -103,7 +103,7 @@ const Header = () => {
                         <Link
                             href="/"
                             component={NextLink}
-                            color="text.primary"
+                            color="text.secondary"
                             className={styles.nav_menu__title_mobile__link}
                         >
                             FilmLibary
@@ -114,7 +114,7 @@ const Header = () => {
                             <Link
                                 href="/top"
                                 component={NextLink}
-                                color="text.primary"
+                                color="text.secondary"
                                 className={styles.nav_menu__desktop__link}
                             >
                                 Top

@@ -20,6 +20,12 @@ interface ItemsTopMovie {
     imdbid?: string
 }
 
+interface ItemsDataPosters {
+    title: string
+    image: string
+    description: string
+}
+
 type RootNode = {
     children: ReactNode;
 }
@@ -46,5 +52,5 @@ type TParams = {
 }
 
 export type { 
-    RootNode, TopMoviesData, ItemsTopMovie, TChildren, TPageTitle, TParams
+    RootNode, TopMoviesData, ItemsTopMovie, TChildren, TPageTitle, TParams, ItemsDataPosters
 };

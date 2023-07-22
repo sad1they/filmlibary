@@ -33,7 +33,7 @@ const Footer = () => {
                                 <Link
                                     href="/"
                                     component={NextLink}
-                                    color="text.primary"
+                                    color="text.secondary"
                                     className={styles.link_title_md}
                                 >
                                     FilmLibary
@@ -54,7 +54,7 @@ const Footer = () => {
                                 <Link
                                     href="/"
                                     component={NextLink}
-                                    color="text.primary"
+                                    color="text.secondary"
                                     className={styles.nav_menu__title_mobile__link}
                                 >
                                     FilmLibary
@@ -66,7 +66,7 @@ const Footer = () => {
                                 <Typography
                                     variant="body1"
                                     component="div"
-                                    color="text.primary"
+                                    color="text.secondary"
                                 >
                                     Copyright © {new Date().getFullYear()} FilmLibary.
                                 </Typography>

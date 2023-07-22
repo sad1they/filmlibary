@@ -40,6 +40,7 @@ const CardSearch = ({topMovies}: IPropsTopMovies<ItemsTopMovie[]>) => {
                                 type: 'search',
                             }}
                             onChange={handleChange}
+                            sx={{ "label": {color: 'text.primary'} }} 
                         />
                     )}
                 />

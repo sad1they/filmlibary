@@ -9,8 +9,8 @@ const theme = createTheme({
             main: '#fff'
         },
         text: {
-            primary: '#fff',
-            secondary: '#000'
+            primary: '#000',
+            secondary: '#fff'
         }
     }
 });
