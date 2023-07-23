@@ -10,7 +10,7 @@ const PostersList = () => {
     return (
         <>
             {data.map(item => (
-                <ItemList item={item} />
+                <ItemList item={item} key={item.title} />
             ))}
         </>
     )
